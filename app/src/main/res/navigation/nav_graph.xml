@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/graph_fragments"
+    app:startDestination="@id/customerListFragment">
+
+    <fragment
+        android:id="@+id/customerListFragment"
+        android:name="com.androidsolutions.fragmentnavigation.CustomerListFragment"
+        android:label="CustomerList" >
+        <action
+            android:id="@+id/action_customerListFragment_to_customerEditFragment"
+            app:destination="@id/customerEditFragment" />
+        <action
+            android:id="@+id/action_customerListFragment_to_customerDetailFragment"
+            app:destination="@id/customerDetailFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/customerEditFragment"
+        android:name="com.androidsolutions.fragmentnavigation.CustomerEditFragment"
+        android:label="EditCustomer" />
+    <fragment
+        android:id="@+id/customerDetailFragment"
+        android:name="com.androidsolutions.fragmentnavigation.CustomerDetailFragment"
+        android:label="CustomerDetails" >
+        <action
+            android:id="@+id/action_customerDetailFragment_to_customerEditFragment"
+            app:destination="@id/customerEditFragment" />
+    </fragment>
+
+</navigation>
